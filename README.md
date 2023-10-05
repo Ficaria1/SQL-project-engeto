@@ -1,2 +1,2 @@
 # SQL-project-engeto
-First SQL-engeto project
+První SQL projekt, který je zaměřený na vytvoření SQL příkazů v rámci ENGETO databáze na základě zadaných otázek
