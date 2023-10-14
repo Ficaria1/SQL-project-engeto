@@ -120,3 +120,77 @@ FROM v_andrea_zemanova_payroll_complete vazpc
 WHERE unit = 'Kč' AND calculation = 'přepočtený'
 ORDER BY payroll_year, industry, payroll_quarter 
 ;
+
+
+
+SELECT *
+FROM v_andrea_zemanova_recounted_payroll vazrp
+;
+
+
+
+SELECT count(*)
+FROM v_andrea_zemanova_recounted_payroll vazrp
+;
+-- 1720 radku
+
+
+
+-- vycistit od NULL hodnot v industry:
+SELECT *
+FROM v_andrea_zemanova_recounted_payroll vazrp 
+WHERE industry IS NOT NULL 
+;
+
+
+
+SELECT count(*)
+FROM v_andrea_zemanova_recounted_payroll vazrp 
+WHERE industry IS NOT NULL 
+;
+-- 1634 radku
+
+
+
+-- prumer platu pro dane odvetvi za rok:
+SELECT 
+	payroll_year,
+	industry,
+	industry_branch_code, 
+	round(avg(value)) AS avg_value,
+	unit 
+FROM v_andrea_zemanova_recounted_payroll vazrp 
+WHERE industry IS NOT NULL 
+GROUP BY payroll_year, industry, industry_branch_code, unit 
+ORDER BY payroll_year, industry_branch_code
+;
+
+
+
+-- vytvoreni pohledu pro industry:
+CREATE VIEW v_andrea_zemanova_avg_payroll_industry AS
+SELECT 
+	payroll_year,
+	industry,
+	industry_branch_code, 
+	round(avg(value)) AS avg_value,
+	unit 
+FROM v_andrea_zemanova_recounted_payroll vazrp 
+WHERE industry IS NOT NULL 
+GROUP BY payroll_year, industry, industry_branch_code, unit 
+ORDER BY payroll_year, industry_branch_code
+;
+
+
+SELECT *
+FROM v_andrea_zemanova_avg_payroll_industry vazapi 
+;
+
+
+SELECT count(*)
+FROM v_andrea_zemanova_avg_payroll_industry vazapi 
+;
+-- 418 radku
+
+
+
