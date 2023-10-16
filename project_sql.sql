@@ -523,3 +523,10 @@ DROP TABLE IF EXISTS t_andrea_zemanova_project_SQL_primary_final_join
 
 DROP TABLE IF EXISTS t_andrea_zemanova_project_SQL_primary_final1
 ;
+
+
+SELECT min(period) AS min,
+	max(period) AS max
+FROM t_andrea_zemanova_project_SQL_primary_final tazpspf 
+;
+-- 2006-2018
