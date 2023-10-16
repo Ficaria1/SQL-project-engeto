@@ -474,7 +474,7 @@ FROM v_andrea_zemanova_avg_food_year_14 vazafy
 ;
 
 
--- vytvoreni pohledu price_food_year:
+-- vytvoreni pohledu food_avg_year:
 CREATE VIEW v_andrea_zemanova_food_avg_year AS
 SELECT 
 	`YEAR(``year from``)`  AS period,
@@ -486,4 +486,40 @@ SELECT
 FROM v_andrea_zemanova_avg_food_year_14 vazafy 
 ;
 
+-- napojeni tabulek pres sloupecky let:
+SELECT *
+FROM v_andrea_zemanova_avg_payroll_industry AS ind
+LEFT JOIN v_andrea_zemanova_food_avg_year AS food
+	ON food.period = ind.payroll_year 
+;
 
+CREATE TABLE t_andrea_zemanova_project_SQL_primary_final_join AS 
+SELECT *
+FROM v_andrea_zemanova_avg_payroll_industry AS ind
+LEFT JOIN v_andrea_zemanova_food_avg_year AS food
+	ON food.period = ind.payroll_year 
+;
+
+
+-- vycisteni od NULL hodnot:
+SELECT * 
+FROM t_andrea_zemanova_project_SQL_primary_final_join tazpspfj
+WHERE period IS NOT NULL OR food_code IS NOT NULL OR food IS NOT NULL 
+	OR price_value IS NOT NULL OR price_unit IS NOT NULL OR avg_food_year IS NOT NULL
+;
+
+
+-- vytvoreni primary tabulky:
+CREATE TABLE t_andrea_zemanova_project_SQL_primary_final AS
+SELECT * 
+FROM t_andrea_zemanova_project_SQL_primary_final_join tazpspfj
+WHERE period IS NOT NULL OR food_code IS NOT NULL OR food IS NOT NULL 
+	OR price_value IS NOT NULL OR price_unit IS NOT NULL OR avg_food_year IS NOT NULL
+;
+
+
+DROP TABLE IF EXISTS t_andrea_zemanova_project_SQL_primary_final_join
+;
+
+DROP TABLE IF EXISTS t_andrea_zemanova_project_SQL_primary_final1
+;
