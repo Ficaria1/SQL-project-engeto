@@ -122,7 +122,11 @@ WITH CZE AS (
 		sec.country,
 		sec.`year`,
 		sec.GDP 
+<<<<<<< HEAD
 	FROM t_andrea_zemanova_project_SQL_secondary_final AS sec
+=======
+	FROM t_andrea_zemanova_project_SQL_secondary_final_update AS sec
+>>>>>>> e219e48147329189234dd22588fd339d33721071
 	WHERE country = 'Czech Republic'
 )
 SELECT 
