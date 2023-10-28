@@ -123,8 +123,6 @@ WITH CZE AS (
 		sec.`year`,
 		sec.GDP 
 	FROM t_andrea_zemanova_project_SQL_secondary_final AS sec
-
-	FROM t_andrea_zemanova_project_SQL_secondary_final_update AS sec
 	WHERE country = 'Czech Republic'
 )
 SELECT 
