@@ -114,7 +114,7 @@ ORDER BY payroll_year, industry, payroll_quarter
 
 
 -- vytvoreni pohledu
-CREATE VIEW v_andrea_zemanova_recounted_payroll AS 
+CREATE OR REPLACE VIEW v_andrea_zemanova_recounted_payroll AS 
 SELECT *
 FROM v_andrea_zemanova_payroll_complete vazpc 
 WHERE unit = 'Kč' AND calculation = 'přepočtený'
