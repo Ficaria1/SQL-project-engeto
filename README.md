@@ -102,10 +102,14 @@ Dodatečné tabulky:
   https://github.com/Ficaria1/SQL-project-engeto/blob/1165e9f795d3899a81680027eeed533b21147463/1st_question.sql#L132-L136
   
 - **Závěr:**
-  - pozitivní kontinuální nárůst mezd je pozorován u tří odvětví, v těchto odvětvích nebyl zaznamenán   pokles mezd v letech 2006 až 2018:
+  - pozitivní kontinuální nárůst mezd je pozorován u tří odvětví, v těchto odvětvích nebyl zaznamenán žádný pokles mezd v letech 2006 až 2018:
    - 'Zpracovatelský průmysl'
    - 'Zdravotní a sociální péče'
    - 'Ostatní činnosti'
+  - největší nárůst zaznamenala dvě odvětví, a to 'Těžba a dobývání' a 'Výroba a rozvod elektřiny, plynu, tepla a klimatiz. vzduchu', kdy meziroční procentuální nárůst činil 13,8%
+    <br>
+  - naopak v 16 odvětvích je patrný pokles mezd alespoň jednou v rámci sledovaných let
+  - největší propad ve mzdách zaznamenalo odvětví 'Peněžnictví a pojišťovnictví', a to v roce 2013, kdy procentuální meziroční rozdíl činil 8,8%
   
 
    
