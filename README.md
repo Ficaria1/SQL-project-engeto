@@ -70,7 +70,7 @@ Dodatečné tabulky:
   <br>
   
 **Vypracování sekundární finální tabulky** `t_andrea_zemanova_project_SQL_secondary_final`: 
-- spojím tabulky economies a countries pomocí společného sloupečku country, vyberu jen státy Evropy a roky 2006 až 2018
+- spojím tabulky `economies` a `countries` pomocí společného sloupečku `country`, vyberu jen státy Evropy a roky 2006 až 2018
   https://github.com/Ficaria1/SQL-project-engeto/blob/2df78c36664334d72efc9bd3a00c286e1fe8a861/final_table_2.sql#L91-L111
    
 
