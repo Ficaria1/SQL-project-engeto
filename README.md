@@ -45,6 +45,11 @@ Dodatečné tabulky:
 - ***countries*** - všemožné informace o zemích na světě, například hlavní město, měna, národní jídlo nebo průměrná výška populace
 - ***economies*** - HDP, GINI, daňová zátěž, atd. pro daný stát a rok
 
+#### Postup zpracování projektu:
+
+* vypracování primární finální tabulky: 
+
+
 
 
 
