@@ -84,6 +84,10 @@ Dodatečné tabulky:
 - výsledkem je, že mzdy zaznamenaly pokles alespoň jednou za dané roky v 16 odvětvích
 - zjišťuji, ve kterých odvětvích mzdy rostou kontinuálně během let 2006 až 2018:
   https://github.com/Ficaria1/SQL-project-engeto/blob/1165e9f795d3899a81680027eeed533b21147463/1st_question.sql#L95-L109
+- vypsání procentuálního rozdílu mezd v rámci jednotlivých let:
+  https://github.com/Ficaria1/SQL-project-engeto/blob/1165e9f795d3899a81680027eeed533b21147463/1st_question.sql#L112-L129
+- seřazení daných hodnot v pohledu `v_andrea_zemanova_1st_question_perc_diff` vzestupně podle sloupce `perc_diff_payroll`:
+  https://github.com/Ficaria1/SQL-project-engeto/blob/1165e9f795d3899a81680027eeed533b21147463/1st_question.sql#L132-L136
   
 
    
