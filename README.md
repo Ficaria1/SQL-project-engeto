@@ -50,9 +50,11 @@ Dodatečné tabulky:
   * prvním krokem bylo vytvoření primární tabulky `t_andrea_zemanova_project_SQL_primary_final`, dále pak vytvoření sekundární tabulky `t_andrea_zemanova_project_SQL_secondary_final`
   * následně byly vytvořeny dodatečné sady SQL skriptů, které vedly k zodpovězení pěti již zmíněných výzkumných otázek
   * podrobnější popis jednotlivých sad SQL dotazů je uveden v komentářích u příslušných skriptů
-    
-Vypracování primární finální tabulky `t_andrea_zemanova_project_SQL_primary_final`: 
-- nejprve jsem pomocí příkazu LEFT JOIN spojila všechny přidružené tabulky s tabulkou `czechia_payroll`
+
+  <br>
+  
+**Vypracování primární finální tabulky** `t_andrea_zemanova_project_SQL_primary_final`: 
+ - nejprve jsem pomocí příkazu LEFT JOIN spojila všechny přidružené tabulky s tabulkou `czechia_payroll`
   https://github.com/Ficaria1/SQL-project-engeto/blob/c03d8ad1bf99bb491e71e2270a7c8731acef92f2/final_table_1.sql#L1-L19
 - vybírám data 'Průměrná hrubá mzda na zaměstnance' pro sloupec `type`, 'přepočtený' pro sloupec `calculation` (zohledňuji přepočtené hodnoty vzhledem k typu úvazku)
 - odstraním NULL hodnoty pro sloupec `industry`
