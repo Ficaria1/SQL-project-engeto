@@ -58,7 +58,13 @@ Dodatečné tabulky:
   https://github.com/Ficaria1/SQL-project-engeto/blob/c03d8ad1bf99bb491e71e2270a7c8731acef92f2/final_table_1.sql#L1-L19
 - vybírám data 'Průměrná hrubá mzda na zaměstnance' pro sloupec `type`, 'přepočtený' pro sloupec `calculation` (zohledňuji přepočtené hodnoty vzhledem k typu úvazku)
 - odstraním NULL hodnoty pro sloupec `industry`
-- 
+- vypočítám průměrné mzdy pro dané odvětví za rok
+  https://github.com/Ficaria1/SQL-project-engeto/blob/c03d8ad1bf99bb491e71e2270a7c8731acef92f2/final_table_1.sql#L171-L183
+- sjednotím všechny přidružené tabulky k tabulce `czechia_price`
+  https://github.com/Ficaria1/SQL-project-engeto/blob/c03d8ad1bf99bb491e71e2270a7c8731acef92f2/final_table_1.sql#L214-L230
+  - vybírám hodnoty pro sloupec `region_code` IS NULL - jedná se o průměrné ceny potravin v daném roce (toto ověření jsem dokázala výpočtem viz konkrétní SQL sada skriptů v souboru final_table_1.sql)
+   https://github.com/Ficaria1/SQL-project-engeto/blob/c03d8ad1bf99bb491e71e2270a7c8731acef92f2/final_table_1.sql#L298-L321
+
 
 
 
