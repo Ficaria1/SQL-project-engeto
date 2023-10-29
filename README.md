@@ -1,4 +1,4 @@
-# SQL-project-ENGETO
+# SQL-projekt_1-ENGETO
 
 ## Analýza dat mezd a cen potravin v České republice pomocí SQL
 
