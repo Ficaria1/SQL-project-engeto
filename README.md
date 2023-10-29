@@ -54,25 +54,35 @@ Dodatečné tabulky:
   <br>
   
 **Vypracování primární finální tabulky** `t_andrea_zemanova_project_SQL_primary_final`: 
-- nejprve jsem pomocí příkazu LEFT JOIN spojila všechny přidružené tabulky s tabulkou `czechia_payroll`
+- nejprve jsem pomocí příkazu LEFT JOIN spojila všechny přidružené tabulky s tabulkou `czechia_payroll`:
   https://github.com/Ficaria1/SQL-project-engeto/blob/c03d8ad1bf99bb491e71e2270a7c8731acef92f2/final_table_1.sql#L1-L19
 - vybírám data 'Průměrná hrubá mzda na zaměstnance' pro sloupec `type`, 'přepočtený' pro sloupec `calculation` (zohledňuji přepočtené hodnoty vzhledem k typu úvazku)
 - odstraním NULL hodnoty pro sloupec `industry`
-- vypočítám průměrné mzdy pro dané odvětví za rok
+- vypočítám průměrné mzdy pro dané odvětví za rok:
   https://github.com/Ficaria1/SQL-project-engeto/blob/c03d8ad1bf99bb491e71e2270a7c8731acef92f2/final_table_1.sql#L171-L183
-- sjednotím všechny přidružené tabulky k tabulce `czechia_price`
+- sjednotím všechny přidružené tabulky k tabulce `czechia_price`:
   https://github.com/Ficaria1/SQL-project-engeto/blob/c03d8ad1bf99bb491e71e2270a7c8731acef92f2/final_table_1.sql#L214-L230
-- vybírám hodnoty pro sloupec `region_code` IS NULL - jedná se o průměrné ceny potravin v daném roce (toto ověření jsem dokázala výpočtem viz konkrétní SQL sada skriptů v souboru final_table_1.sql)
+- vybírám hodnoty pro sloupec `region_code` IS NULL - jedná se o průměrné ceny potravin v daném roce (toto ověření jsem dokázala výpočtem viz konkrétní SQL sada skriptů v souboru final_table_1.sql):
    https://github.com/Ficaria1/SQL-project-engeto/blob/c03d8ad1bf99bb491e71e2270a7c8731acef92f2/final_table_1.sql#L298-L321
-- finální skript vyčištěný od NULL hodnot (potřebuji jen data pro společné roky) pro vytvoření primární tabulky `t_andrea_zemanova_project_SQL_primary_final` <br>
+- finální skript vyčištěný od NULL hodnot (potřebuji jen data pro společné roky) pro vytvoření primární tabulky `t_andrea_zemanova_project_SQL_primary_final`: <br>
    https://github.com/Ficaria1/SQL-project-engeto/blob/c03d8ad1bf99bb491e71e2270a7c8731acef92f2/final_table_1.sql#L526-L532
 
   <br>
   
 **Vypracování sekundární finální tabulky** `t_andrea_zemanova_project_SQL_secondary_final`: 
 - spojím tabulky `economies` a `countries` pomocí společného sloupečku `country`, vyberu jen státy Evropy a roky 2006 až 2018
-- v tabulce mám také požadované hodnoty HDP, GINI koeficientu a populace
+- v tabulce mám také požadované hodnoty HDP, GINI koeficientu a populace:
   https://github.com/Ficaria1/SQL-project-engeto/blob/2df78c36664334d72efc9bd3a00c286e1fe8a861/final_table_2.sql#L91-L111
+
+  <br>
+
+**Otázka č. 1: Rostou v průběhu let mzdy ve všech odvětvích, nebo v některých klesají?**
+- pomocí následujícího dotazu zjistím rozdíl mezd všech odvětví v jednotlivých letech:
+  https://github.com/Ficaria1/SQL-project-engeto/blob/1165e9f795d3899a81680027eeed533b21147463/1st_question.sql#L39-L55
+- z vytvořeného pohledu vypíšu ta odvětví, kde mzdy zaznamenaly pokles mezi lety 2006 až 2018:
+  https://github.com/Ficaria1/SQL-project-engeto/blob/1165e9f795d3899a81680027eeed533b21147463/1st_question.sql#L69-L74
+- výsledkem je, že mzdy zaznamenaly pokles alespoň jednou za dané roky v 16 odvětvích
+- zjišťuji, ve kterých odvětvích mzdy rostou kontinuálně během let 2006 až 2018
    
 
 
