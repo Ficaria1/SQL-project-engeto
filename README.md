@@ -68,6 +68,7 @@ Dodatečné tabulky:
    https://github.com/Ficaria1/SQL-project-engeto/blob/c03d8ad1bf99bb491e71e2270a7c8731acef92f2/final_table_1.sql#L526-L532
 
   <br>
+  
 **Vypracování sekundární finální tabulky** `t_andrea_zemanova_project_SQL_secondary_final`: 
 
 
