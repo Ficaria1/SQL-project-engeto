@@ -37,6 +37,14 @@ zdroj dat: Portál otevřených dat ČR <br>
 
 <img src="https://github.com/Ficaria1/SQL-project-engeto/assets/144990489/5b3657ae-ade9-4888-8eef-499688a04a17" alt="sekundární" width= 70> **Sekundární tabulky:**
 
+Číselníky sdílených informací o ČR:
+- ***czechia_region*** - číselník krajů České republiky dle normy CZ-NUTS 2
+- ***czechia_district*** - číselník okresů České republiky dle normy LAU
+
+Dodatečné tabulky:
+- ***countries*** - všemožné informace o zemích na světě, například hlavní město, měna, národní jídlo nebo průměrná výška populace
+- ***economies*** - 
+
 
 
 
