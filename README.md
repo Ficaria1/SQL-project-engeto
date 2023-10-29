@@ -56,6 +56,7 @@ Dodatečné tabulky:
 **Vypracování primární finální tabulky** `t_andrea_zemanova_project_SQL_primary_final`: 
 - nejprve jsem pomocí příkazu LEFT JOIN spojila všechny přidružené tabulky s tabulkou `czechia_payroll`:
   https://github.com/Ficaria1/SQL-project-engeto/blob/c03d8ad1bf99bb491e71e2270a7c8731acef92f2/final_table_1.sql#L1-L19
+  
 - vybírám data 'Průměrná hrubá mzda na zaměstnance' pro sloupec `type`, 'přepočtený' pro sloupec `calculation` (zohledňuji přepočtené hodnoty vzhledem k typu úvazku)
 - odstraním NULL hodnoty pro sloupec `industry`
 - vypočítám průměrné mzdy pro dané odvětví za rok:
@@ -82,7 +83,10 @@ Dodatečné tabulky:
 - z vytvořeného pohledu vypíšu ta odvětví, kde mzdy zaznamenaly pokles mezi lety 2006 až 2018:
   https://github.com/Ficaria1/SQL-project-engeto/blob/1165e9f795d3899a81680027eeed533b21147463/1st_question.sql#L69-L74
 - výsledkem je, že mzdy zaznamenaly pokles alespoň jednou za dané roky v 16 odvětvích
-- zjišťuji, ve kterých odvětvích mzdy rostou kontinuálně během let 2006 až 2018
+- zjišťuji, ve kterých odvětvích mzdy rostou kontinuálně během let 2006 až 2018:
+  https://github.com/Ficaria1/SQL-project-engeto/blob/1165e9f795d3899a81680027eeed533b21147463/1st_question.sql#L95-L109
+  
+
    
 
 
