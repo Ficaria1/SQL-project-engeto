@@ -110,6 +110,10 @@ Dodatečné tabulky:
     <br>
   * naopak v 16 odvětvích je patrný pokles mezd alespoň jednou v rámci sledovaných let
   * největší propad ve mzdách zaznamenalo odvětví 'Peněžnictví a pojišťovnictví', a to v roce 2013, kdy procentuální meziroční rozdíl činil 8,8%
+
+    <br>
+
+ **Otázka č. 2: Kolik je možné si koupit litrů mléka a kilogramů chleba za první a poslední srovnatelné období v dostupných datech cen a mezd?**
   
 
    
