@@ -47,7 +47,10 @@ Dodatečné tabulky:
 
 #### Postup zpracování projektu:
 
-* vypracování primární finální tabulky: 
+  * prvním krokem bylo vytvoření primární tabulky `t_andrea_zemanova_project_SQL_primary_final`, dále pak vytvoření sekundární tabulky `t_andrea_zemanova_project_SQL_secondary_final`
+  * následně byly vytvořeny dodatečné sady SQL skriptů, které vedly k zodpovězení pěti již zmíněných výzkumných otázek
+  * podrobnější popis jednotlivých sad SQL dotazů je uveden v komentářích u příslušných skriptů
+  * vypracování primární finální tabulky: 
 
 
 
