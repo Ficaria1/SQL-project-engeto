@@ -109,5 +109,36 @@ WHERE payroll_trend != 'no change' AND trend.industry_branch_code NOT IN (
 );
 
 
+CREATE OR REPLACE VIEW v_andrea_zemanova_1st_question_perc_diff AS
+SELECT
+	industry,
+	industry_branch_code,
+	current_year,
+	current_payroll,
+	last_year,
+	lag(current_payroll, 1) OVER (PARTITION BY industry_branch_code ORDER BY current_year) AS last_payroll,
+	round(((current_payroll - lag(current_payroll, 1) OVER (PARTITION BY industry_branch_code ORDER BY current_year)) / lag(current_payroll, 1) 
+		OVER (PARTITION BY industry_branch_code ORDER BY current_year)) * 100, 1) AS perc_diff_payroll,
+	CASE 
+		WHEN current_payroll > LAG(current_payroll, 1) OVER (PARTITION BY industry_branch_code ORDER BY current_year) THEN 'increasing'
+		WHEN current_payroll < LAG(current_payroll, 1) OVER (PARTITION BY industry_branch_code ORDER BY current_year) THEN 'decreasing'
+		ELSE 'no change'
+	END AS 'payroll_trend'
+FROM v_andrea_zemanova_industry_payroll_trend vazipt 
+ORDER BY industry_branch_code, current_year 
+;
+
+
+SELECT *
+FROM v_andrea_zemanova_1st_question_perc_diff vazsqpd 
+WHERE perc_diff_payroll IS NOT NULL 
+ORDER BY perc_diff_payroll 
+;
+-- největší propad ve mzdách zaznamenalo odvětví Peněžnictví a pojišťovnictví, a to v roce 2013, kdy procentuální meziroční rozdíl činil 8,8%
+-- naopak největší nárůst zaznamenala dvě odvětví, 
+-- a to Těžba a dobývání a Výroba a rozvod elektřiny, plynu, tepla a klimatiz. vzduchu, kdy meziroční procentuální nárůst činil 13,8%
+
+
+
 
 
