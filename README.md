@@ -33,6 +33,11 @@ zdroj dat: Portál otevřených dat ČR <br>
 - ***czechia_payroll_unit*** - číselník jednotek hodnot v tabulce mezd
 - ***czechia_payroll_value_type*** - číselník typů hodnot v tabulce mezd
 - ***czechia_price*** - informace o cenách vybraných potravin za několikaleté období. Datová sada pochází z Portálu otevřených dat ČR
+- ***czechia_price_category*** - číselník kategorií potravin, které se vyskytují v našem přehledu
+
+<img src="https://github.com/Ficaria1/SQL-project-engeto/assets/144990489/5b3657ae-ade9-4888-8eef-499688a04a17" alt="sekundární" width= 70> **Sekundární tabulky:**
+
+
 
 
 
