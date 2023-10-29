@@ -23,5 +23,6 @@ Má výška HDP vliv na změny ve mzdách a cenách potravin? Neboli, pokud HDP 
 
 
 #### Datové sady, které je možné použít pro získání vhodného datového podkladu:
+![image](https://github.com/Ficaria1/SQL-project-engeto/assets/144990489/f924c989-81fd-4036-b217-3ac0f043b85d)
 
 
