@@ -29,3 +29,23 @@ zdroj dat: Portál otevřených dat ČR <br>
 
 - ***czechia_payroll*** – informace o mzdách v různých odvětvích za několikaleté období
 - ***czechia_payroll_calculation*** – číselník kalkulací v tabulce mezd
+- ***czechia_payroll_industry_branch*** - číselník odvětví v tabulce mezd
+- ***czechia_payroll_unit*** - číselník jednotek hodnot v tabulce mezd
+- ***czechia_payroll_value_type*** - číselník typů hodnot v tabulce mezd
+- ***czechia_price*** - informace o cenách vybraných potravin za několikaleté období. Datová sada pochází z Portálu otevřených dat ČR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
