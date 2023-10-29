@@ -101,7 +101,11 @@ Dodatečné tabulky:
 - seřazení daných hodnot v pohledu `v_andrea_zemanova_1st_question_perc_diff` vzestupně podle sloupce `perc_diff_payroll`:
   https://github.com/Ficaria1/SQL-project-engeto/blob/1165e9f795d3899a81680027eeed533b21147463/1st_question.sql#L132-L136
   
-- 
+- **Závěr:**
+  - pozitivní kontinuální nárůst mezd je pozorován u tří odvětví, v těchto odvětvích nebyl zaznamenán   pokles mezd v letech 2006 až 2018:
+   - 'Zpracovatelský průmysl'
+   - 'Zdravotní a sociální péče'
+   - 'Ostatní činnosti'
   
 
    
