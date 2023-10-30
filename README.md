@@ -113,8 +113,13 @@ Dodatečné tabulky:
 
     <br>
 
- **Otázka č. 2: Kolik je možné si koupit litrů mléka a kilogramů chleba za první a poslední srovnatelné období v dostupných datech cen a mezd?**
-  
+**Otázka č. 2: Kolik je možné si koupit litrů mléka a kilogramů chleba za první a poslední srovnatelné období v dostupných datech cen a mezd?**
+- vypočítám si průměrné platy v letech 2006 a 2018 ze všech odvětví
+- následně tyto průměrné mzdy vydělím průměrnými cenami daných potravin ('Chléb konzumní kmínový' a 'Mléko polotučné pasterované')
+- výsledkem jsou množství daného zboží, která si lidé mohli průměrně pořídit v letech 2006 a 2018:
+   https://github.com/Ficaria1/SQL-project-engeto/blob/7753c3e49b4c9c332ab1cbb4b656f03c646d1447/2nd_question.sql#L6-L18
+- můžeme provést ještě alternativní výpočet, kdy nebudeme sledovat průměrnou hrubou mzdu, ale celkovou vydělanou hrubou mzdu ze všech odvětví ve sledovaných letech (počítám se součtem všech průměrných hrubých mezd ve všech odvětvích a dělím ho průměrnou cenou dané potraviny v daném roce):
+  https://github.com/Ficaria1/SQL-project-engeto/blob/7753c3e49b4c9c332ab1cbb4b656f03c646d1447/2nd_question.sql#L23-L35
 
    
 
