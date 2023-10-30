@@ -138,7 +138,7 @@ Dodatečné tabulky:
 
      <br>
 
-  **Otázka č. 4: Existuje rok, ve kterém byl meziroční nárůst cen potravin výrazně vyšší než růst mezd (větší než 10 %)?**
+**Otázka č. 4: Existuje rok, ve kterém byl meziroční nárůst cen potravin výrazně vyšší než růst mezd (větší než 10 %)?**
 - pomocí následujícího SQL skriptu spočítám procentuální rozdíl průměrných hrubých mezd za jednotlivé roky 2006 až 2018
 - 
 - díky CASE podmínce určím, zda průměrná hrubá mzda mezi jednotlivými roky poklesla nebo vzorstla:
