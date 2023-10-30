@@ -120,7 +120,7 @@ Dodatečné tabulky:
 
   
 - **Závěr:**
-  * průměrná hrubá mzda v roce 2006 činila 21 165 Kč - za tuto mzdu bylo možné pořídit např. 1313 kg zboží 'Chléb konzumní kmínový', jehož průměrná cena činila 16.12 Kč, nebo 1466 l zboží 'Mléko polotučné pasterované', jehož průměrná cena v roce 2006 byla 14,44 Kč
+  * průměrná hrubá mzda v roce 2006 činila 21 165 Kč - za tuto mzdu bylo možné pořídit např. 1313 kg zboží 'Chléb konzumní kmínový', jehož průměrná cena činila 16,12 Kč, nebo 1466 l zboží 'Mléko polotučné pasterované', jehož průměrná cena v roce 2006 byla 14,44 Kč
   * průměrná hrubá mzda v roce 2018 činila 33 092 Kč - a za tutuo mzdu bylo možné pořídit např. 1365 kg zboží 'Chléb konzumní kmínový', jehož průměrná cena činila 24,24 Kč, nebo 1670 l zboží 'Mléko polotučné pasterované', jehož průměrná cena v roce 2018 činila 19,82 Kč
     
 
