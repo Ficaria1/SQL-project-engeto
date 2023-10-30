@@ -1,3 +1,7 @@
+/*		Andrea Zemanová
+		Discord: Andrea Z. ficaria1	
+*/
+
 SELECT * 
 FROM t_andrea_zemanova_project_SQL_primary_final tazpspf 
 ;
