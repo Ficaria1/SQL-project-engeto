@@ -156,7 +156,7 @@ Dodatečné tabulky:
  
      <br>
 
-**Otázka č. 5: Má výška HDP vliv na změny ve mzdách a cenách potravin? Neboli, pokud HDP vzroste výrazněji v jednom roce, projeví se to na cenách potravin či mzdách ve stejném nebo násdujícím roce výraznějším růstem?**
+**Otázka č. 5: Má výška HDP vliv na změny ve mzdách a cenách potravin? Neboli, pokud HDP vzroste výrazněji v jednom roce, projeví se to na cenách potravin či mzdách ve stejném nebo následujícím roce výraznějším růstem?**
 - pomocí tohoto CTE dotazu spojím primární tabulku `t_andrea_zemanova_project_SQL_primary_final` k sekundární tabulce `t_andrea_zemanova_project_SQL_secondary_final` (potřebuji mít hodnoty HDP u primární tabulky) a vyberu Českou republiku:
   https://github.com/Ficaria1/SQL-project-engeto/blob/e039bdb0c968ea0f810beed7cd6bebade0894e54/5th_question.sql#L42-L63
   
