@@ -54,14 +54,14 @@ Dodatečné tabulky:
   <br>
   
 **Vypracování primární finální tabulky** `t_andrea_zemanova_project_SQL_primary_final`: 
-- nejprve jsem pomocí příkazu LEFT JOIN spojila všechny přidružené tabulky s tabulkou `czechia_payroll`:
+- nejprve jsem pomocí příkazu LEFT JOIN (nechci ztratit žádná data) spojila všechny přidružené tabulky s tabulkou `czechia_payroll`:
   https://github.com/Ficaria1/SQL-project-engeto/blob/c03d8ad1bf99bb491e71e2270a7c8731acef92f2/final_table_1.sql#L1-L19
   
 - vybírám data 'Průměrná hrubá mzda na zaměstnance' pro sloupec `type`, 'přepočtený' pro sloupec `calculation` (zohledňuji přepočtené hodnoty vzhledem k typu úvazku)
  
 - odstraním NULL hodnoty pro sloupec `industry`
  
-- vypočítám průměrné mzdy pro dané odvětví za rok:
+- vypočítám průměrné hrubé mzdy pro dané odvětví za rok:
   https://github.com/Ficaria1/SQL-project-engeto/blob/c03d8ad1bf99bb491e71e2270a7c8731acef92f2/final_table_1.sql#L171-L183
  
 - sjednotím všechny přidružené tabulky k tabulce `czechia_price`:
@@ -114,17 +114,74 @@ Dodatečné tabulky:
     <br>
 
 **Otázka č. 2: Kolik je možné si koupit litrů mléka a kilogramů chleba za první a poslední srovnatelné období v dostupných datech cen a mezd?**
-- vypočítám si průměrné platy v letech 2006 a 2018 ze všech odvětví
-- následně tyto průměrné mzdy vydělím průměrnými cenami daných potravin ('Chléb konzumní kmínový' a 'Mléko polotučné pasterované')
-- výsledkem jsou množství daného zboží, která si lidé mohli průměrně pořídit v letech 2006 a 2018:
+- vypočítám si průměrné hrubé mzdy v letech 2006 a 2018 ze všech odvětví
+- následně tyto průměrné hrubé mzdy vydělím průměrnými cenami daných potravin ('Chléb konzumní kmínový' a 'Mléko polotučné pasterované'):
    https://github.com/Ficaria1/SQL-project-engeto/blob/7753c3e49b4c9c332ab1cbb4b656f03c646d1447/2nd_question.sql#L6-L18
-- můžeme provést ještě alternativní výpočet, kdy nebudeme sledovat průměrnou hrubou mzdu, ale celkovou vydělanou hrubou mzdu ze všech odvětví ve sledovaných letech (počítám se součtem všech průměrných hrubých mezd ve všech odvětvích a dělím ho průměrnou cenou dané potraviny v daném roce):
-  https://github.com/Ficaria1/SQL-project-engeto/blob/7753c3e49b4c9c332ab1cbb4b656f03c646d1447/2nd_question.sql#L23-L35
+
   
 - **Závěr:**
-  * z prvního dotazu je patrné, že průměrná hrubá mzda v roce 2006 činila 21 165 Kč a v roce 2018 činila 33 092 Kč
-  * za rok 2006 si lidé mohli průměrně koupit 1313 kg zboží 'Chléb konzumní kmínový', jehož průměrná cena činila 16.12 Kč nebo 1466 l zboží 'Mléko polotučné pasterované'
+  * průměrná hrubá mzda v roce 2006 činila 21 165 Kč - za tuto mzdu bylo možné pořídit např. 1313 kg zboží 'Chléb konzumní kmínový', jehož průměrná cena činila 16,12 Kč, nebo 1466 l zboží 'Mléko polotučné pasterované', jehož průměrná cena v roce 2006 byla 14,44 Kč
+  * průměrná hrubá mzda v roce 2018 činila 33 092 Kč - a za tuto mzdu bylo možné pořídit např. 1365 kg zboží 'Chléb konzumní kmínový', jehož průměrná cena činila 24,24 Kč, nebo 1670 l zboží 'Mléko polotučné pasterované', jehož průměrná cena v roce 2018 činila 19,82 Kč
+  * závěrem lze říci, že ceny chleba a mléka rostou pomaleji, než průměrná hrubá mzda za srovnatelná období
+    
+    <br>
 
+**Otázka č. 3: Která kategorie potravin zdražuje nejpomaleji (je u ní nejnižší percentuální meziroční nárůst)?**
+- pomocí vnořených subselektů vytvořím dotaz, kde spočítám meziroční procentuální rozdíl jednotlivých položek zboží:
+  https://github.com/Ficaria1/SQL-project-engeto/blob/655ebd1e35d9f4d3ce6a8a647c94c42b26dd0beb/3rd_question.sql#L12-L41
+
+
+- **Závěr:**
+  * nejpomaleji zdražuje potravina 'Banány žluté' - průměrně o 0,81% během sledovaného období
+  * kategorie potravin 'Cukr krystalový' a 'Rajská jablka červená kulatá' dokonce ve sledovaném období zlevnily, a to o 1,92% ('Cukr krystalový') a o 0,75% ('Rajská jablka červená kulatá')
+  
+
+     <br>
+
+**Otázka č. 4: Existuje rok, ve kterém byl meziroční nárůst cen potravin výrazně vyšší než růst mezd (větší než 10 %)?**
+- pomocí následujícího SQL skriptu spočítám procentuální rozdíl průměrných hrubých mezd za jednotlivé roky 2006 až 2018
+- díky CASE podmínce určím, zda průměrná hrubá mzda mezi jednotlivými roky poklesla nebo vzrostla:
+  https://github.com/Ficaria1/SQL-project-engeto/blob/e039bdb0c968ea0f810beed7cd6bebade0894e54/4th_question.sql#L30-L55
+  
+- obdobně spočítám procentuální meziroční rozdíl všech průměrných cen kategorií potravin:
+  https://github.com/Ficaria1/SQL-project-engeto/blob/e039bdb0c968ea0f810beed7cd6bebade0894e54/4th_question.sql#L90-L112
+  
+- pomocí následujícího dotazu spojím oba pomocné pohledy dohromady pomocí funkce JOIN (chci jen společné hodnoty) přes společný sloupeček roků:
+  https://github.com/Ficaria1/SQL-project-engeto/blob/e039bdb0c968ea0f810beed7cd6bebade0894e54/4th_question.sql#L134-L148
+
+
+- **Závěr:**
+  * v meziročním porovnávání cen potravin a mezd bylo zjištěno, že růst cen potravin nikdy výrazně nepřekročil růst mezd
+  * z výsledku dotazu vyplývá, že meziroční nárůst mezd je vždy vyšší než meziroční růst cen potravin
+ 
+     <br>
+
+**Otázka č. 5: Má výška HDP vliv na změny ve mzdách a cenách potravin? Neboli, pokud HDP vzroste výrazněji v jednom roce, projeví se to na cenách potravin či mzdách ve stejném nebo následujícím roce výraznějším růstem?**
+- pomocí tohoto CTE dotazu spojím primární tabulku `t_andrea_zemanova_project_SQL_primary_final` k sekundární tabulce `t_andrea_zemanova_project_SQL_secondary_final` (potřebuji mít hodnoty HDP u primární tabulky) a vyberu Českou republiku:
+  https://github.com/Ficaria1/SQL-project-engeto/blob/e039bdb0c968ea0f810beed7cd6bebade0894e54/5th_question.sql#L42-L63
+  
+- sepíši dotaz pro průměrné ceny všech potravin v jednotlivých letech s HDP hodnotami:
+  https://github.com/Ficaria1/SQL-project-engeto/blob/7c36c4b7502ef096cc9ade89e50d2425b5790586/5th_question.sql#L124-L155
+  
+- následný dotaz udává průměrné mzdy ve všech odvětvích v jednotlivých letech
+  https://github.com/Ficaria1/SQL-project-engeto/blob/e039bdb0c968ea0f810beed7cd6bebade0894e54/5th_question.sql#L180-L198
+  
+- pokračuji výpočtem procentuálního rozdílu HDP mezi jednotlivými roky:
+  https://github.com/Ficaria1/SQL-project-engeto/blob/e039bdb0c968ea0f810beed7cd6bebade0894e54/5th_question.sql#L214-L225
+  
+- závěrečným skriptem spojím předchozí pomocné pohledy dohromady přes společný sloupeček let pomocí funkce JOIN (chci jen společné roky)
+  https://github.com/Ficaria1/SQL-project-engeto/blob/e039bdb0c968ea0f810beed7cd6bebade0894e54/5th_question.sql#L233-L260
+
+- jako výraznější rozdíl v meziročním nárůstu HDP si zvolím 5%. Meziroční nárůst mezd i cen potravin si zvolím také 5%.
+
+
+- **Závěr:**
+  * z výsledku dotazu vyplývá, že HDP mohl ovlivnit ceny potravin a také mzdy v roce 2007, 
+kdy procentuální rozdíl HDP činil 5.3%, nárůst mezd činil 6,9% a nárůst cen potravin činil 6,74%.
+  * výška HDP v roce 2007 mohla ovlivnit také ceny potravin a mzdy v následujícím roce 2008. Meziroční nárůst mezd v roce 2008 byl 7,7% a nárůst cen potravin byl 6,19%.
+  * hodnota HDP mohla dále ovlivnit ceny potravin a mzdy také v roce 2017, kdy meziroční procentuální nárůst HDP vůči roku 2016 činil 5,2%, nárůst mezd činil 6,2% a nárůst cen potravin činil 9,63%
+  
+  
 
 
 
