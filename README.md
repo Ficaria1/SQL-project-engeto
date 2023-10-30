@@ -6,19 +6,19 @@
 Cílem projektu je vytvořit primární finální tabulku (pro data mezd a cen potravin za Českou republiku sjednocených na totožné porovnatelné období – společné roky) a sekundární finální tabulku (pro dodatečná data o dalších evropských státech s HDP, GINI koeficientem a populací) pomocí SQL strukturovaného dotazovacího jazyka. Na základě těchto tabulek je pak zapotřebí sestavit dodatečné sady SQL skriptů k zodpovězení 5 výzkumných otázek. <br>
 
 #### Výzkumné otázky: 
-- ***1. otázka:***
+ ***1. otázka:***
 Rostou v průběhu let mzdy ve všech odvětvích, nebo v některých klesají? <br>
 
-- ***2. otázka:***
+ ***2. otázka:***
 Kolik je možné si koupit litrů mléka a kilogramů chleba za první a poslední srovnatelné období v dostupných datech cen a mezd? <br>
 
-- ***3. otázka:***
+ ***3. otázka:***
 Která kategorie potravin zdražuje nejpomaleji (je u ní nejnižší percentuální meziroční nárůst)?
 
-- ***4. otázka:***
+ ***4. otázka:***
 Existuje rok, ve kterém byl meziroční nárůst cen potravin výrazně vyšší než růst mezd (větší než 10 %)?
 
-- ***5. otázka:***
+ ***5. otázka:***
 Má výška HDP vliv na změny ve mzdách a cenách potravin? Neboli, pokud HDP vzroste výrazněji v jednom roce, projeví se to na cenách potravin či mzdách ve stejném nebo násdujícím roce výraznějším růstem?
 
 
