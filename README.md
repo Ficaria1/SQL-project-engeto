@@ -61,7 +61,7 @@ Dodatečné tabulky:
  
 - odstraním NULL hodnoty pro sloupec `industry`
  
-- vypočítám průměrné mzdy pro dané odvětví za rok:
+- vypočítám průměrné hrubé mzdy pro dané odvětví za rok:
   https://github.com/Ficaria1/SQL-project-engeto/blob/c03d8ad1bf99bb491e71e2270a7c8731acef92f2/final_table_1.sql#L171-L183
  
 - sjednotím všechny přidružené tabulky k tabulce `czechia_price`:
@@ -140,10 +140,13 @@ Dodatečné tabulky:
 
   **Otázka č. 4: Existuje rok, ve kterém byl meziroční nárůst cen potravin výrazně vyšší než růst mezd (větší než 10 %)?**
 - pomocí následujícího SQL skriptu spočítám procentuální rozdíl průměrných hrubých mezd za jednotlivé roky 2006 až 2018
+- 
 - díky CASE podmínce určím, zda průměrná hrubá mzda mezi jednotlivými roky poklesla nebo vzorstla:
   https://github.com/Ficaria1/SQL-project-engeto/blob/e039bdb0c968ea0f810beed7cd6bebade0894e54/4th_question.sql#L30-L55
+  
 - obdobně spočítám procentuální meziroční rozdíl všech průměrných cen kategorií potravin:
   https://github.com/Ficaria1/SQL-project-engeto/blob/e039bdb0c968ea0f810beed7cd6bebade0894e54/4th_question.sql#L90-L112
+  
 - pomocí následujícího dotazu spojím oba pomocné pohledy dohromady pomocí funkce JOIN (chci jen společné hodnoty) přes společný sloupeček roků:
   https://github.com/Ficaria1/SQL-project-engeto/blob/e039bdb0c968ea0f810beed7cd6bebade0894e54/4th_question.sql#L134-L148
 
