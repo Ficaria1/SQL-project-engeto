@@ -130,11 +130,56 @@ Dodatečné tabulky:
 - pomocí vnořených subselektů vytvořím dotaz, kde spočítám meziroční procentuální rozdíl jednotlivých položek zboží:
   https://github.com/Ficaria1/SQL-project-engeto/blob/655ebd1e35d9f4d3ce6a8a647c94c42b26dd0beb/3rd_question.sql#L12-L41
 
+
 - **Závěr:**
   * nejpomaleji zdražuje potravina 'Banány žluté' - průměrně o 0,81% během sledovaného období
   * kategorie potravin 'Cukr krystalový' a 'Rajská jablka červená kulatá' dokonce ve sledovaném období zlevnily, a to o 1,92% ('Cukr krystalový') a o 0,75% ('Rajská jablka červená kulatá')
   
 
+     <br>
+
+  **Otázka č. 4: Existuje rok, ve kterém byl meziroční nárůst cen potravin výrazně vyšší než růst mezd (větší než 10 %)?**
+- pomocí následujícího SQL skriptu spočítám procentuální rozdíl průměrných hrubých mezd za jednotlivé roky 2006 až 2018
+- díky CASE podmínce určím, zda průměrná hrubá mzda mezi jednotlivými roky poklesla nebo vzorstla:
+  https://github.com/Ficaria1/SQL-project-engeto/blob/e039bdb0c968ea0f810beed7cd6bebade0894e54/4th_question.sql#L30-L55
+- obdobně spočítám procentuální meziroční rozdíl všech průměrných cen kategorií potravin:
+  https://github.com/Ficaria1/SQL-project-engeto/blob/e039bdb0c968ea0f810beed7cd6bebade0894e54/4th_question.sql#L90-L112
+- pomocí následujícího dotazu spojím oba pomocné pohledy dohromady pomocí funkce JOIN (chci jen společné hodnoty) přes společný sloupeček roků:
+  https://github.com/Ficaria1/SQL-project-engeto/blob/e039bdb0c968ea0f810beed7cd6bebade0894e54/4th_question.sql#L134-L148
+
+
+- **Závěr:**
+  * v meziročním porovnávání cen potravin a mezd bylo zjištěno, že růst cen potravin nikdy výrazně nepřekročil růst mezd
+  * z výsledku dotazu vyplývá, že meziroční nárůst mezd je vždy vyšší než meziroční růst cen potravin
+ 
+     <br>
+
+   **Otázka č. 5: Má výška HDP vliv na změny ve mzdách a cenách potravin? Neboli, pokud HDP vzroste výrazněji v jednom roce, projeví se to na cenách potravin či mzdách ve stejném nebo násdujícím roce výraznějším růstem?**
+- pomocí tohoto CTE dotazu spojím primární tabulku `t_andrea_zemanova_project_SQL_primary_final` k sekundární tabulce `t_andrea_zemanova_project_SQL_secondary_final` (potřebuji mít hodnoty HDP u primární tabulky) a vyberu Českou republiku:
+  https://github.com/Ficaria1/SQL-project-engeto/blob/e039bdb0c968ea0f810beed7cd6bebade0894e54/5th_question.sql#L42-L63
+  
+- sepíši dotaz pro průměrné ceny všech potravin v jednotlivých letech s HDP hodnotami:
+  https://github.com/Ficaria1/SQL-project-engeto/blob/e039bdb0c968ea0f810beed7cd6bebade0894e54/5th_question.sql#L125-L155
+  
+- následný dotaz udává průměrné mzdy ve všech odvětvích v jednotlivých letech
+  https://github.com/Ficaria1/SQL-project-engeto/blob/e039bdb0c968ea0f810beed7cd6bebade0894e54/5th_question.sql#L180-L198
+  
+- pokračuji výpočtem procentuálního rozdílu HDP mezi jednotlivými roky:
+  https://github.com/Ficaria1/SQL-project-engeto/blob/e039bdb0c968ea0f810beed7cd6bebade0894e54/5th_question.sql#L214-L225
+  
+- závěrečným skriptem spojím předchozí pomocné pohledy dohromady přes společný sloupeček let pomocí funkce JOIN (chci jen společné roky)
+  https://github.com/Ficaria1/SQL-project-engeto/blob/e039bdb0c968ea0f810beed7cd6bebade0894e54/5th_question.sql#L233-L260
+
+- jako výraznější rozdíl v meziročním nárůstu HDP si zvolím 5%. Meziroční nárůst mezd i cen potravin si zvolím také 5%.
+
+
+- **Závěr:**
+  * z výsledku dotazu vyplývá, že HDP mohl ovlivnit ceny potravin a také mzdy v roce 2007, 
+kdy procentuální rozdíl HDP činil 5.3%, nárůst mezd činil 6,9% a nárůst cen potravin činil 6,74%.
+  * výška HDP v roce 2007 mohla ovlivnit také ceny potravin a mzdy v následujícím roce 2008. Meziroční nárůst mezd v roce 2008 byl 7,7% a nárůst cen potravin byl 6,19%.
+  * hodnota HDP mohla dále ovlivnit ceny potravin a mzdy také v roce 2017, kdy meziroční procentuální nárůst HDP vůči roku 2016 činil 5,2%, nárůst mezd činil 6,2% a nárůst cen potravin činil 9,63%
+  
+  
 
 
 
