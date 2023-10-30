@@ -161,7 +161,7 @@ Dodatečné tabulky:
   https://github.com/Ficaria1/SQL-project-engeto/blob/e039bdb0c968ea0f810beed7cd6bebade0894e54/5th_question.sql#L42-L63
   
 - sepíši dotaz pro průměrné ceny všech potravin v jednotlivých letech s HDP hodnotami:
-  https://github.com/Ficaria1/SQL-project-engeto/blob/e039bdb0c968ea0f810beed7cd6bebade0894e54/5th_question.sql#L125-L155
+  https://github.com/Ficaria1/SQL-project-engeto/blob/7c36c4b7502ef096cc9ade89e50d2425b5790586/5th_question.sql#L124-L155
   
 - následný dotaz udává průměrné mzdy ve všech odvětvích v jednotlivých letech
   https://github.com/Ficaria1/SQL-project-engeto/blob/e039bdb0c968ea0f810beed7cd6bebade0894e54/5th_question.sql#L180-L198
