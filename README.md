@@ -124,6 +124,16 @@ Dodatečné tabulky:
   * průměrná hrubá mzda v roce 2018 činila 33 092 Kč - a za tutuo mzdu bylo možné pořídit např. 1365 kg zboží 'Chléb konzumní kmínový', jehož průměrná cena činila 24,24 Kč, nebo 1670 l zboží 'Mléko polotučné pasterované', jehož průměrná cena v roce 2018 činila 19,82 Kč
   * závěrem lze říci, že ceny chleba a mléka rostou pomaleji, než průměrná hrubá mzda za srovnatelná období
     
+    <br>
+
+**Otázka č. 3: Která kategorie potravin zdražuje nejpomaleji (je u ní nejnižší percentuální meziroční nárůst)?**
+- pomocí vnořených subselektů vytvořím dotaz, kde spočítám meziroční procentuální rozdíl jednotlivých položek zboží:
+  https://github.com/Ficaria1/SQL-project-engeto/blob/655ebd1e35d9f4d3ce6a8a647c94c42b26dd0beb/3rd_question.sql#L12-L41
+
+- **Závěr:**
+  * nejpomaleji zdražuje potravina 'Banány žluté' - průměrně o 0,81% během sledovaného období
+  * kategorie potravin 'Cukr krystalový' a 'Rajská jablka červená kulatá' dokonce ve sledovaném období zlevnily, a to o 1,92% ('Cukr krystalový') a o 0,75% ('Rajská jablka červená kulatá')
+  
 
 
 
