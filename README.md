@@ -120,8 +120,10 @@ Dodatečné tabulky:
    https://github.com/Ficaria1/SQL-project-engeto/blob/7753c3e49b4c9c332ab1cbb4b656f03c646d1447/2nd_question.sql#L6-L18
 - můžeme provést ještě alternativní výpočet, kdy nebudeme sledovat průměrnou hrubou mzdu, ale celkovou vydělanou hrubou mzdu ze všech odvětví ve sledovaných letech (počítám se součtem všech průměrných hrubých mezd ve všech odvětvích a dělím ho průměrnou cenou dané potraviny v daném roce):
   https://github.com/Ficaria1/SQL-project-engeto/blob/7753c3e49b4c9c332ab1cbb4b656f03c646d1447/2nd_question.sql#L23-L35
-
-   
+  
+- **Závěr:**
+  * z prvního dotazu je patrné, že průměrná hrubá mzda v roce 2006 činila 21 165 Kč a v roce 2018 činila 33 092 Kč
+  * za rok 2006 si lidé mohli průměrně koupit 1313 kg zboží 'Chléb konzumní kmínový', jehož průměrná cena činila 16.12 Kč nebo 1466 l zboží 'Mléko polotučné pasterované'
 
 
 
